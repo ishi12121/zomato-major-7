@@ -1,19 +1,19 @@
 import {FoodModel} from './food';
 import {ImageModel} from './image';
-import {MenuModal} from './menu';
+import {MenuModel} from './menu';
 import {OrderModel} from './order';
 import {RestaurantModel} from './restaurant';
 import {ReviewModel} from './review';
-import {UserModal} from './user';
+import {UserModel} from './user';
 
 export {
     FoodModel,
 ImageModel,
-MenuModal,
+MenuModel,
 OrderModel,
 RestaurantModel,
 ReviewModel,
-UserModal
+UserModel
 
 
 }
