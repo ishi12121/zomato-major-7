@@ -5,6 +5,7 @@ import session from "express-session";
 
 // Private route authorization config
 import privateRouteConfig from "./config/route.config";
+import googleAuthConfig from './config/google.config'
 
 // Database connection
 import ConnectDB from "./database/connection";
@@ -25,6 +26,7 @@ const zomato = express();
 
 // adding additional passport configuration
 privateRouteConfig(passport);
+googleAuthConfig(passport);
 
 zomato.use(express.json());
 zomato.use(session({secret: process.env.JWTSECRET}));
