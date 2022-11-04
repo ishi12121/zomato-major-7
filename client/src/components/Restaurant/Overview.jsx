@@ -37,7 +37,20 @@ const Overview = () => {
     "https://b.zmtcdn.com/data/menus/931/931/8d6623791860b054953b6c2c14d61bcb.jpg",
     "https://b.zmtcdn.com/data/menus/931/931/6d462a04051c0eabb0067149aa84cc64.jpg",
   ]);
-  const [reviews, setReviews] = useState([]);
+  const [reviews, setReviews] = useState([ 
+    {
+    rating: 3.5,
+    isRestaurantReview: false,
+    createdAt: "Fri Oct 14 2022 20:20:34 GMT+0530 (India Standard Time)",
+    reviewText: "Very bad experience.",
+  },
+  {
+    rating: 4.5,
+    isRestaurantReview: false,
+    createdAt: "Fri Oct 14 2022 20:19:34 GMT+0530 (India Standard Time)",
+    reviewText: "Very good experience.",
+  },
+]);
   const { id } = useParams;
 
   const slideConfig = {
@@ -115,14 +128,14 @@ const Overview = () => {
         <div className="flex flex-col-reverse">
           <div className="my-4">
             <h4 className="text-lg font-medium">
-              Rate your delivery experience
+            {restaurant.name} Reviews
             </h4>
-            <ReactStars
+           {/* <ReactStars
               count={5}
               onChange={(newRating) => console.log(newRating)}
               size={24}
               activeColor="#ffd700"
-            />
+          /> */}
             {reviews.map((review, index) => (
               <ReviewCard {...review} key={index} />
             ))}
@@ -166,7 +179,7 @@ const Overview = () => {
       </div>
       <aside
         style={{ height: "fit-content" }}
-        className="hidden md:flex md:w-4/12 sticky rounded-xl top-20 bg-white p-3 shadow-md flex-col gap-4"
+        className="hidden md:flex md:w-4/12 sticky rounded-xl top-20 bg-white py-4 px-3 shadow-md flex-col gap-4"
       >
         <MapView
           title="McDonald's"
