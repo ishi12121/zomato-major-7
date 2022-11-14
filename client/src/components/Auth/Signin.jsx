@@ -1,7 +1,7 @@
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
 import { FcGoogle } from "react-icons/fc";
-
+import { getMySelf } from "../../redux/reducers/user/user.action";
 
 // redux
 import { useDispatch } from "react-redux";
@@ -23,15 +23,15 @@ const Signin = ({ isOpen, setIsOpen }) => {
   };
 
   const dispatch = useDispatch();
-
-  const submit = () => {
-    dispatch(signIn(userData));
+  const submit = async () => {
+    await dispatch(signIn(userData));
+    await dispatch(getMySelf());
     closeModal();
     setUserData({ email: "", password: "" });
   };
 
   const googleSignIn = () =>
-    (window.location.href = "https://localhost:4000/auth/google");
+    (window.location.href = "http://localhost:4000/auth/google");
 
   return (
     <>
