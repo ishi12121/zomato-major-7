@@ -3,7 +3,7 @@ import { FaUserAlt } from "react-icons/fa";
 import { HiLocationMarker } from "react-icons/hi";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { RiSearch2Line } from "react-icons/ri";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 // components
 import SignUp from "../Auth/Signup";
@@ -41,11 +41,13 @@ const MobileNav = ({ user, isDropdownOpen, setIsDropdownOpen, signIn, signUp }) 
   return (
     <div className="flex w-full items-center justify-between lg:hidden container m-auto py-">
       <div className="w-28">
-        <img
-          src="https://b.zmtcdn.com/web_assets/b40b97e677bc7b2ca77c58c61db266fe1603954218.png"
-          alt="logo"
-          className="w-full h-full"
-        />
+      <Link to="/">
+      <img
+        src="https://b.zmtcdn.com/web_assets/b40b97e677bc7b2ca77c58c61db266fe1603954218.png"
+        alt="logo"
+        className="w-full h-full"
+      />
+    </Link>
       </div>
       <div className="flex items-center gap-3 relative">
   
@@ -59,7 +61,7 @@ const MobileNav = ({ user, isDropdownOpen, setIsDropdownOpen, signIn, signUp }) 
               className="border border-gray-300 text-zomato-400 w-12 h-12 rounded-full"
             >
               <img
-                src="https://cdn3.vectorstock.com/i/1000x1000/00/92/teen-boy-character-avatar-vector-11360092.jpg"
+                src="/images/avatar.png"
                 alt="avatar"
                 className="w-full h-full rounded-full object-cover"
               />
@@ -118,11 +120,13 @@ const LargeNav = ({ user, isDropdownOpen, setIsDropdownOpen, signIn, signUp }) =
     <div className="w-full items-center justify-between hidden lg:flex px-14">
       <div className="gap-4  items-center justify-around flex">
         <div className="w-20">
-          <img
-            src="https://b.zmtcdn.com/web_assets/b40b97e677bc7b2ca77c58c61db266fe1603954218.png"
-            alt="logo"
-            className="w-full h-full"
-          />
+        <Link to="/">
+        <img
+          src="https://b.zmtcdn.com/web_assets/b40b97e677bc7b2ca77c58c61db266fe1603954218.png"
+          alt="logo"
+          className="w-full h-full"
+        />
+      </Link>
         </div>
       </div>
       <div className="w-3/4 bg-white shadow-md p-3 flex items-center gap-3 border border-gray-200 rounded">
@@ -155,7 +159,7 @@ const LargeNav = ({ user, isDropdownOpen, setIsDropdownOpen, signIn, signUp }) =
               className="border border-gray-300 text-zomato-400 w-9 h-9 rounded-full"
             >
               <img
-                src="https://cdn3.vectorstock.com/i/1000x1000/00/92/teen-boy-character-avatar-vector-11360092.jpg"
+              src="/images/avatar.png"
                 alt="avatar"
                 className="w-full h-full rounded-full object-cover"
               />
