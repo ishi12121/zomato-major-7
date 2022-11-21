@@ -47,7 +47,7 @@ const Checkout = () => {
       },
     };
 
-    let razorpay = new window.Razorpay({ options });
+    let razorpay = new window.Razorpay( options );
     razorpay.open();
   };
 
