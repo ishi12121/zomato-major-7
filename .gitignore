@@ -2,6 +2,10 @@
 /server/package-lock.json
 /server/.env
 /server/dist
+/server/Dockerfile
 /client/node_modules
 /client/package-lock.json
 /client/.env
+/client/Dockerfile
+zomato-clone-7.pem
+gitlab-zomato-clone-7
